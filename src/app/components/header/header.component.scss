@@ -1,0 +1,113 @@
+//@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+@import '../../../assets/sass/variables.scss';
+.fixed_navbar{
+    position: fixed !important;
+    transition: all .2s ease-in;
+    background-color: $white;
+    padding: .5rem 6rem !important;
+    .logo-desc{
+        color: $text-color !important;
+    }
+
+    li a{
+        color: $text-color !important;
+    }
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 6rem;
+    z-index: 10;
+    //background-color: $white;
+    //margin-bottom: 3rem;
+    @media screen and (max-width:992px) {
+        padding: .75rem;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        .logo-name{
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 2;
+            padding: 0;
+            margin: 0;
+            line-height: 1.5rem;
+            color: $primary;
+        }
+        .logo-desc{
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            line-height: 16px;
+            color: $white;
+        }
+
+    }
+    ul{
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        align-items: center;
+        padding: 0;
+        margin-left: auto;
+        @media screen and (max-width:992px) {
+            align-items: initial;
+        }
+
+        li{
+            position: relative;
+
+            &::before{
+
+                content: '';
+                background: $primary;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+            }
+            &:hover{
+
+                &::before{
+                    @media screen  and (min-width:992px){
+                        animation: fw .3s both;
+                    }
+
+                }
+
+
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $white;
+            font-size: 1rem;
+        }
+    }
+
+
+}
+
+
+@keyframes fw {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
