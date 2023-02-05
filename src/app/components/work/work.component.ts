@@ -1,5 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
-import { Router, } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-work',
@@ -8,9 +9,10 @@ import { Router, } from '@angular/router';
 })
 export class WorkComponent implements OnInit {
 
-  constructor( private router:Router) { }
+  constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

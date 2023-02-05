@@ -1,13 +1,16 @@
 @import '../../../assets/sass/variables.scss';
 
 .projects-container{
-    padding: 2rem 6rem;
+    padding: 0 6rem 2rem 6rem;
+    //margin-top: 3rem;
+    @media screen and (max-width:992px) {
+        padding: 2rem;
+    }
     .main-title{
         text-align: center;
-        color: $primary;
-        font-weight: 500;
-        margin-bottom: 5rem;
-        animation: zoomText 3s infinite forwards;
+        margin-top:3rem;
+        margin-bottom: 2rem;
+        font-weight:600 !important ;
     }
     .d-gird{
         display: grid;
@@ -15,6 +18,12 @@
         grid-auto-flow: row dense;
         gap: 2rem;
         row-gap: 70px;
+        @media screen and (max-width:992px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media screen and (max-width:500px) {
+            grid-template-columns: 1fr;
+        }
         .project{
             position: relative;
             cursor: pointer;
@@ -28,6 +37,8 @@
                 right: 0;
                 width: 0;
                 height: 0;
+                z-index: 1;
+                opacity: .6 !important;
             }
             &::after{
                 position: absolute;
@@ -38,33 +49,34 @@
                 left: 0;
                 width: 0;
                 height: 0;
+                z-index: 1;
+                opacity: .6 !important;
             }
             img{
                 width: 100%;
                 height: 300px;
-                z-index: 2;
+                z-index: -1;
             }
             .text-sec{
                 position: absolute;
                 left: 0;
-                top: 0;
-                width: 76%;
-                display: flex;
-                justify-content: center;
-                background-color: $white;
-                margin-left: 13%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                height: 40px;
-                z-index: -1;
-                box-shadow: 0 .5rem .5rem 0rem rgba(.5,0.5,.5,.25) !important;
-                border: 2px solid $primary;
+                bottom: 0;
+                width: 100%;
+                color: $white;
+                padding: 2rem 1rem;
+                z-index: 2;
                 h2{
                     font-size: 1.2rem;
-                    font-weight: 500;
-                    color: $primary;
-                    text-align: center;
-                    margin: auto;
+                    font-weight: 600;
+                    opacity: 0;
+                    text-shadow: 0 2px 2px #555;
+                    margin: 0;
+                    padding: 0;
+                    &:last-child{
+                        font-size: 1rem;
+                        font-weight: 500;
+
+                    }
                 }
 
             }
@@ -73,6 +85,11 @@
                 .text-sec{
                     transition: all .8s;
                     margin-top: -38px;
+                    h2{
+                        transition: all 1s;
+                        opacity: 1;
+                    }
+
                 }
 
                 &::before , &::after{
@@ -88,13 +105,21 @@
 }
 
 @keyframes zoomText {
-    0%{
+    0%,100%{
         font-size: 1rem;
     }
     50%{
         font-size: 3rem;
     }
-    100%{
-        font-size: 1rem;
+
+}
+
+@keyframes zoomText-sm {
+    0%,100%{
+        font-size: .8rem;
     }
+    50%{
+        font-size: 1.2rem;
+    }
+
 }

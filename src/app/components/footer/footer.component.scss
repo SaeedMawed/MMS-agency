@@ -1,0 +1,26 @@
+@import '../../../assets/sass/variables.scss';
+.footer-container{
+    padding: 4rem 7rem 0rem 7rem;
+    background-color: $primary;
+    @media screen and (max-width:992px) {
+        padding: 4rem 1rem 0rem 1rem;
+    }
+    .d-flex{
+        @media screen and (max-width:500px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    h1{
+        font-size: 1.2rem;
+        @media screen and (max-width:992px) {
+            font-size: 1rem;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $white;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+}

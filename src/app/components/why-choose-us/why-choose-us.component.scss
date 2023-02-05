@@ -1,0 +1,74 @@
+@import '../../../assets/sass/variables.scss';
+.wcu-container{
+    padding: 5rem 7rem;
+    position: relative;
+    @media screen and (max-width:992px) {
+        padding: 1rem;
+    }
+    .wcu-box{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        position: relative;
+        vertical-align: middle;
+        @media screen and (max-width:768px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .img-box{
+            img{
+                width: 100%;
+                height: auto;
+                max-width: 600px;
+
+            }
+        }
+        .text-box{
+            display: flex;
+            flex-direction: column;
+            //padding-left: 7rem;
+            justify-content: center;
+            line-height: 2;
+            @media screen and (max-width:1100px) {
+                padding: 1rem !important;
+            }
+            h1{
+                font-weight: 600;
+                color: $primary;
+            }
+            p{
+                color: $text-color;
+                font-size: 1rem;
+                font-weight: 500;
+                @media screen and (max-width:992px) {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+
+.custom-shape-divider-bottom-1675299253 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: scaleX(-1);
+}
+
+.custom-shape-divider-bottom-1675299253 svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+    @media screen and (max-width:992px) {
+        height: 160px;
+    }
+}
+
+.custom-shape-divider-bottom-1675299253 .shape-fill {
+    fill: $primary;
+}

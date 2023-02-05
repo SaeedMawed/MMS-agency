@@ -35,14 +35,31 @@ $portoflio-theme-angular-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+@import './assets/sass/variables.scss';
+html, body { height: 100%;
+
+    scroll-behavior: smooth;
+  }
 body {
   margin: 0;
-   font-family: Roboto, "Helvetica Neue", sans-serif;
+   //font-family: Roboto, "Helvetica Neue", sans-serif;
+   font-family: "Roboto", Arial, sans-serif;
    background-color: #fdfdfd;
+   overflow-x: hidden;
    }
 
 
 .mycontainer{
   padding: 1rem 7rem;
+  @media screen and (max-width:992px) {
+    padding: 1rem;
+}
+}
+
+.h1{
+  font-size: 1.4rem !important;
+  color: $text-color !important;
+  @media screen and (max-width:992px) {
+    font-size: 1.2rem !important;
+  }
 }

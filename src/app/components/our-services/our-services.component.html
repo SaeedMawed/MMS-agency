@@ -1,58 +1,17 @@
 <div class="services-container">
-    <div class="card">
+    <div class="card" *ngFor="let service of services">
         <div class="card-header">
             <div class="icon">
-                <img src="../../../assets/imgs/marketing.png" alt="">
+                <img src="./assets/imgs/{{service.image}}" alt="">
             </div>
             <div class="title">
-                Digital Marketing
+                {{service.title}}
             </div>
         </div>
 
         <p class="desc">
-            Digital marketing offers numerous benefits for businesses, including increased brand awareness, improved engagement and customer loyalty, and a higher return on investment. By utilizing digital channels such as website, email, social media and search engines, businesses can reach a wider audience and drive growth.
+            {{service.desc}}
         </p>
     </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="icon">
-                <img src="../../../assets/imgs/design.png" alt="">
-            </div>
-            <div class="title">
-                Ui/Ux
-            </div>
-        </div>
 
-        <p class="desc">
-            As a UI/UX specialist, I offer a range of services to enhance your digital presence and create engaging user experiences. From conducting user research and creating wireframes, to designing and testing interfaces, I am dedicated to delivering effective and user-friendly solutions for your business.
-        </p>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="icon">
-                <img src="../../../assets/imgs/seo.png" alt="">
-            </div>
-            <div class="title">
-                Search Optimization
-            </div>
-        </div>
-
-        <p class="desc">
-            Our search engine optimization (SEO) services help businesses improve their online visibility, increase organic traffic, and reach their target audience. Our customized approach ensures measurable results and long-term success, providing a strong return on investment for our clients.
-        </p>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="icon">
-                <img src="../../../assets/imgs/marketing.png" alt="">
-            </div>
-            <div class="title">
-                development
-            </div>
-        </div>
-
-        <p class="desc">
-            Our custom app development services, including eCommerce shops, portfolios, desktop apps, and Android apps, are designed to help businesses reach success. Our team of experts creates tailored solutions that optimize processes, improve efficiency, and drive growth for our clients.
-        </p>
-    </div>
 </div>

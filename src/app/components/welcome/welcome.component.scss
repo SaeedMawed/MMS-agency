@@ -1,7 +1,7 @@
 @import '../../../assets/sass/variables.scss';
 .welcome-container{
     position: relative;
-    //background-color: $primary;
+
     .welcome-img{
         position: relative;
         width: 100%;
@@ -9,14 +9,16 @@
         .img-full-w{
             width: 100%;
             height: 100vh;
-
+            background: url("../../../assets/imgs/welcome.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         &:after{
             content: '';
             position: absolute;
             width: 100%;
             height: 100vh;
-            background-color: #1b262c;
+            background-color: #41324d;
             opacity: .5;
             z-index: 2;
             top: 0;
@@ -34,21 +36,33 @@
         padding: 15rem 8rem;
         font-size: 1.5rem;
         color: $white;
+        @media screen and (max-width:992px) {
+            padding: 15rem 2rem;
+        }
         //align-items: center;
         //justify-items: center;
         .mms{
             color: $primary;
             font-weight: 700;
             font-size: 2rem;
-            margin-left: 5px;
+            margin-left: .5rem;
+            @media screen and (max-width:992px) {
+                font-size: 1.6rem;
+            }
         }
         .hi{
             font-size: 2.5rem;
             display: inline-flex;
             margin-right: 5px;
+            @media screen and (max-width:992px) {
+                font-size: 1.8rem;
+            }
         }
         .welcomeTo{
             font-size: 2rem;
+            @media screen and (max-width:992px) {
+                font-size: 1.4rem;
+            }
         }
         h1{
 
@@ -58,6 +72,9 @@
         .tw{
             margin: 1rem 0;
             font-size: 1.5rem;
+            @media screen and (max-width:992px) {
+                font-size: 1rem;
+            }
         }
 
     }
